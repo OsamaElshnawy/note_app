@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/views/widgets/custom_search_icon.dart';
+import 'package:note_app/views/widgets/custom_icon.dart';
 
 class CustomAppBarView extends StatelessWidget {
   const CustomAppBarView({super.key, required this.title, required this.icon});
@@ -12,7 +12,7 @@ class CustomAppBarView extends StatelessWidget {
       children: [
         Text(title, style: TextStyle(fontSize: 24)),
         SizedBox(width: MediaQuery.of(context).size.width * 0.77),
-        CustomSearchIcon(icon: icon),
+        CustomIcon(icon: icon),
       ],
     );
   }
