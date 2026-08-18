@@ -15,6 +15,7 @@ class NotesView extends StatelessWidget {
           showModalBottomSheet(
             scrollControlDisabledMaxHeightRatio: 300,
             context: context,
+            isScrollControlled: true,
             builder: (context) {
               return AddNoteButtonSheet();
             },

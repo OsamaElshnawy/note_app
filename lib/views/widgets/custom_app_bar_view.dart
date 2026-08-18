@@ -11,7 +11,7 @@ class CustomAppBarView extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(title, style: TextStyle(fontSize: 24)),
-        SizedBox(width: MediaQuery.of(context).size.width * 0.77),
+        SizedBox(width: MediaQuery.of(context).size.width * 0.05),
         CustomIcon(icon: icon),
       ],
     );
