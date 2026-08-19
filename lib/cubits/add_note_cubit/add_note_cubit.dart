@@ -8,7 +8,7 @@ part 'add_note_state.dart';
 
 class AddNoteCubit extends Cubit<AddNoteState> {
   AddNoteCubit() : super(AddNoteInitial());
-
+  bool isLoading = false;
   addNote(NoteModel note) async {
     emit(AddNoteLoading());
     try {
@@ -18,7 +18,6 @@ class AddNoteCubit extends Cubit<AddNoteState> {
       emit(AddNoteSuccess());
       await notesBox.add(note);
     } on Exception catch (e) {
-      // TODO
       emit(AddNoteFailure(e.toString()));
     }
     // Add the note to the notes box
